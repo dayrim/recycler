@@ -1,0 +1,6 @@
+export { default as Landing }  from './landing/landing.js'
+export { default as Section1 }  from './section1/section1.js'
+export { default as Section2 }  from './section2/section2.js'
+export { default as Section3 }  from './section3/section3.js'
+export { default as Section4 }  from './section4/section4.js'
+export { default as Section5 }  from './section5/section5.js'

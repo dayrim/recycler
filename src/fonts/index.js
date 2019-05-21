@@ -1,0 +1,30 @@
+const defaultFonts = [
+    "Material Icons",
+    //     "Nixie One",
+    //   "Josefin Slab",
+    //   "Lilita One",
+    //   "Bowlby One SC",
+    //   "Alegreyaa Sans SC",
+    //   "Grand Hotel",
+    //       "Patua One",
+    //       "Vidolaka",
+    //       "Hammersmith One",
+    // "Open Sans",
+    "Roboto",
+    // "Roboto Slab",
+    // "Coustard",
+    // "Roboto Condensed",
+    // "Lato",
+    // "Oswald",
+    // "Lora",
+    // "Raleway",
+    // "Londrina Solid",
+    // "Montserrat",
+    // "Merriweather",
+    // "Indie Flower",
+    // "Dosis",
+    // "Arvo",
+    // "Abel"
+  
+  ];
+export default defaultFonts 
