@@ -19,8 +19,8 @@
           "-m",
           "cp",
           "-r",
-          "build",
-          "gs://re-cyclist.co"
+          "build/*",
+          "gs://www.re-cyclist.co"
         ]
       }
     ]
