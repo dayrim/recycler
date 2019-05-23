@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,Suspense } from 'react';
 import * as WebFont from "webfontloader";
 import defaultFonts from './fonts'
 import ReactDOM from 'react-dom';
@@ -8,7 +8,6 @@ import configureStore, { history } from './store.js'
 import { Switch, Route } from 'react-router';
 import { Provider } from 'react-redux';
 import {Layout } from './components'
-import {Landing} from './pages'
 import routes from './routes';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -40,14 +39,17 @@ class App extends Component {
       <Provider store={store}>
        <CssBaseline />
             <ConnectedRouter history={history}>
+
             <Layout>
                 <Switch>
-                <Route exact path="/" component={Landing}/>
-                {routes.map((route,key)=><Route path={route.path} key={key} component={route.component} />)}
+                <Suspense fallback={<div>Loading...</div>}>
+                {routes.map((route,key)=><Route path={route.path} key={key} component={React.lazy(() => import(`./pages/${route.componentpath}`))} />)}
+              </Suspense>
+               
               </Switch>
             </Layout>
               </ConnectedRouter>
- 
+
       </Provider>
 
     )

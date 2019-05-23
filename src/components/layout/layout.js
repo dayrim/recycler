@@ -25,6 +25,14 @@ const theme = createMuiTheme({
 
     ].join(','),
   },
+  overrides: {
+    MuiDivider: { 
+      root: { 
+        height: '0',
+        margin: '10px', 
+      },
+    },
+  },
 });
 
 class Layout extends Component {
