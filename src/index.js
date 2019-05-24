@@ -10,6 +10,7 @@ import { Provider } from 'react-redux';
 import {Layout } from './components'
 import routes from './routes';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import 'video-react/dist/video-react.css';
 
 const store = configureStore()
 

@@ -1,18 +1,88 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Typography from '@material-ui/core/Typography';
 import {withRouter} from 'react-router';
-function Section2() {
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import Box from '@material-ui/core/Box';
+import StepLabel from '@material-ui/core/StepLabel';
+import Divider from '@material-ui/core/Divider';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import { makeStyles } from '@material-ui/core/styles';
+import { StepConnector } from '@material-ui/core';
+
+const useStyles = makeStyles(theme => ({
+  stepperRoot:{
+      backgroundColor: 'unset',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      maxWidth: '400px',
+      margin: 'auto',
+      flexDirection: 'column'
+  },
+  section:{
+    width: '100%'
+  },
+  connectorRoot:{
+    position: 'relative',
+    top: 'unset',
+    left: 'unset',
+    right: 'unset',
+    width: '1px',
+    margin: 'auto'
+  },
+  sectionText:{
+    maxWidth: '650px',
+    margin: "auto"
+  },
+}));
+
+const stepperContent = 
+  {
+    steps: [
+      {
+      header: "Resource data collection",
+      content: "Collect and save data about the material, component or product in a structured manner."
+      },
+      {
+        header: "Valuation",
+        content: "We calculate the financial value, and the environmental and societal impact of the matches we identify."
+      },
+      {
+        header: "Resource exchange platform",
+        content: "We facilitate the matchmaking of material streams to find the highest-value reuse of materials and products."
+      }
+    ]
+  }
+function Section1() {
+  let [tabValue, tabChange] = useState(0);
+  const classes = useStyles();
+
   return (
-    <div >
-            <Typography variant="h1" color="inherit">SECTION 2</Typography>
-      <Typography variant="body1" color="inherit">
-          Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Donec sed odio dui
-Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.
-Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper.
-          </Typography>
+    <div className={classes.section} >
+      
+      <Typography variant="h2" color="inherit"  align="center" >Our process</Typography>
+
+      <Divider/>
+      <Typography className={classes.sectionText} variant="body1" color="inherit"  align="center" >To make successful matches we use systematic and holistic approuch based on business needs. The following tools are instrumental to this process</Typography>
+
+        <Divider/>
+            
+            <Stepper orientation="vertical" alternativeLabel classes={{ root: classes.stepperRoot}} connector={<StepConnector classes={{root: classes.connectorRoot}}/>}>
+              {stepperContent.steps.map((step,key)=>(<Step key={key}>
+
+                <StepLabel active={true}>
+                <Typography variant="h6" color="inherit"  align="center" >{step.header}</Typography>
+                <Typography variant="body1" color="inherit"  align="center" >{step.content}</Typography>
+                </StepLabel>
+
+              </Step>))}
+      </Stepper>
+ 
+
     </div>
   );
 }
 
-export default withRouter(Section2)
+export default withRouter(Section1)

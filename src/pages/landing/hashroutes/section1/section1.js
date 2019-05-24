@@ -1,114 +1,58 @@
-import React,{useState} from 'react';
+import React from 'react';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import {withRouter} from 'react-router';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
 import Divider from '@material-ui/core/Divider';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import ReactPlayer from 'react-player'
 
 const useStyles = makeStyles(theme => ({
-  root:{
-      backgroundColor: 'unset',
+  sectionText:{
+    maxWidth: '650px',
+    margin: "auto",
+    display: "flex",
+    flexDirection: "column",
+    
+    alignItems: 'center',
   },
-  sector1:{
-      
+  section:{
+    width: '100%'
+  },
+  boxRoot:{
+    display: 'flex',
+    justifyContent: 'center'
   }
 }));
 
-const stepperContent = [
-  {
-    tabLabel: "For buyers",
-    steps: [
-      {
-      header: "Sign in",
-      content: "Create your profile (business, charity or person)"
-      },
-      {
-        header: "Find more offers",
-        content: "Find offers near you or search listings based on material, location, or business"
-      },
-      {
-        header: "Negotiate",
-        content: "Negotiate with sellers and make deals."
-      },
-      {
-        header: "Organise pick up",
-        content: "Recycler facilitates item pick-up and transportation."
-      }
-    ]
-  },
-  {
-    tabLabel: "For sellers",
-    steps: [
-      {
-      header: "Sign in",
-      content: "Create your profile (business, charity or person)"
-      },
-      {
-        header: "List items for free",
-        content: "Register the material in our database."
-      },
-      {
-        header: "Receive more offers",
-        content: "Connect with buyers and receive more offers on your material"
-      },
-      {
-        header: "Organise pick up",
-        content: "Recycler facilitates item pick-up and transportation."
-      }
-    ]
-  }
-]
-function Section1() {
-  let [tabValue, tabChange] = useState(0);
+
+function Section2() {
+
   const classes = useStyles();
-
   return (
-    <div  >
-      <Typography variant="h2" color="inherit"  align="center" >How it works</Typography>
+    <div className={classes.section}>
+            <Typography variant="h2" align="center" color="inherit">Waste into revenue</Typography>
+            <Divider/>
       <Divider/>
-      <Tabs
-          indicatorColor="primary"
-          textColor="primary"
-          centered
-          value={tabValue}
-          onChange={(event,tabValue)=>tabChange(tabValue)}
-        >
-            {stepperContent.map((tab,key)=>(<Tab label={tab.tabLabel} key={key}></Tab>))}
+    <Divider/>
+    <Box classes={{root: classes.boxRoot}} className={classes.sectionText}   >
 
-        </Tabs>
-        <Divider/>
-        {tabValue === 1 && 
-            
-            <Stepper alternativeLabel classes={{ root: classes.root}}>
-              {stepperContent[1].steps.map((step,key)=>(<Step key={key}>
-
-                <StepLabel active={true}>
-                <Typography variant="h6" color="inherit"  align="center" >{step.header}</Typography>
-                <Typography variant="body1" color="inherit"  align="center" >{step.content}</Typography>
-                </StepLabel>
-
-              </Step>))}
-      </Stepper>
-        }
-        {tabValue === 0 && 
-            <Stepper alternativeLabel classes={{ root: classes.root}}>
-            {stepperContent[0].steps.map((step,key)=>(<Step key={key}>
-
-              <StepLabel active={true}>
-              <Typography variant="h6" color="inherit"  align="center" >{step.header}</Typography>
-              <Typography variant="body1" color="inherit"  align="center" >{step.content}</Typography>
-              </StepLabel>
-
-            </Step>))}
-      </Stepper>        
-        }
-
+      <ReactPlayer url="/assets/video.mp4" controls width="80%" height="80%"/>
+      <Divider/>
+    <Divider/>
+    <Divider/>
+      <Typography variant="body1" align="center"  color="inherit">
+Re-cyclist is a digital facilitated platform where your company can exchange any excess materials and products in order to save money, reduce waste going to landfill and to develop new business opportunities. Potential exchanges are identified through an online exchange or through facilitated technical assistance. 
+      </Typography>
+      </Box>
+      <Divider/>
+      {/* <Box classes={{root: classes.boxRoot}}>
+      <Button variant="contained" color="primary" size="large">
+        Sign up
+      </Button>
+      </Box> */}
     </div>
   );
 }
 
-export default withRouter(Section1)
+export default withRouter(Section2)

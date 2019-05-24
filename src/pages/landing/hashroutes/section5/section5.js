@@ -1,8 +1,19 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import {withRouter} from 'react-router';
+import { makeStyles } from '@material-ui/core/styles';
 
+const useStyles = makeStyles(theme => ({
+  root:{
+      backgroundColor: 'unset',
+  },
+  sector1:{
+      
+  }
+}));
 function Section5() {
+
+  const classes = useStyles();
   return (
     <div  >
       <Typography variant="h1" color="inherit">SECTION 5</Typography>

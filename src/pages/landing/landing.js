@@ -10,6 +10,9 @@ import ScrollableSection from 'react-update-url-on-scroll';
 import { connect } from "react-redux";
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import SearchIcon from '@material-ui/icons/Search'
+import InputBase from '@material-ui/core/InputBase';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 
 const mapStateToProps = state => ({
   topmenuToggled: state.layout.topmenuToggled
@@ -53,10 +56,10 @@ const useStyles = makeStyles(theme => {
       color: 'white'
     },
     sectionComponent:{
-      minHeight: '45vh',
+      minHeight: '65vh',
       flexDirection: 'column',
       display: 'flex',
-      alignItems: 'flex-end',
+      alignItems: 'center',
       justifyContent: 'center'
     },
     overlay:{
@@ -64,7 +67,42 @@ const useStyles = makeStyles(theme => {
         height: "100%",
         backgroundColor: theme.palette.secondary.main,
         opacity: ".25"
-    }
+    },
+    search: {
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: fade(theme.palette.common.white, 0.75),
+      '&:hover': {
+        backgroundColor: fade(theme.palette.common.white, 1),
+      },
+      marginRight: theme.spacing(3),
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(3),
+        width: '450px',
+      },
+    },
+    searchIcon: {
+      width: theme.spacing(7),
+      height: '100%',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+    },
+    inputRoot: {
+      color: 'inherit',
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 7),
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('md')]: {
+        width: 200,
+      },
+    },
 })});
 
 function Landing(props) {
@@ -88,8 +126,21 @@ function Landing(props) {
       Material exchange for businesses, creators and entrepreneurs
       </Typography>
       <Divider/>
+      <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Search for material …"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+            />
+          </div>
+      <Divider/>
       <Button variant="contained" color="primary" size="large">
-        Sign Up
+        Search
       </Button>
     </Container>
     </Box>

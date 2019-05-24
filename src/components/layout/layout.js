@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
-import {Topmenu} from '../../components'
+import {Topmenu, Footer} from '../../components'
 
 const theme = createMuiTheme({
   palette: {
@@ -44,8 +44,10 @@ class Layout extends Component {
               <ThemeProvider theme={theme}>
               <Topmenu/>
               {this.props.children}
+              <Footer></Footer>
               </ThemeProvider>
               
+          
           </div>
       );
     }

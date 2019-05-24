@@ -1,0 +1,128 @@
+[
+  {  
+    "name": "Plastic Containers",
+    "quantity": "60",
+    "units": null,
+    "condition": "new",
+    "category": "plastic",
+    "description": "We have a number of plastic containers suitable for gardening, storage - anything!",
+    "imageUrl": "https://www.globechain.com/site_resources/globechain/product_images/supersize/75AD7154603C.jpg",
+    "location": {
+      "address":"Vahepere 8",
+      "city": "Tallinn",
+      "postindex": "13516"
+    },
+    "price": "5.35",
+    "transport": "DPD",
+    "seller": {
+      "organization":"Domalgo Corporation",
+      "name":"Arval",
+      "surname":"Pruun"
+    }
+  },
+  {  
+    "name": "Timber pallets and crates",
+    "quantity": "20",
+    "units": null,
+    "condition": "new",
+    "category": "wood",
+    "description": "Good quality timber pieces, pallets and crates. Collection only please.",
+    "imageUrl": "http://www.smileexchange.ie/assets/img/uploads/items/IMG_1587.jpg",
+    "location": {
+      "address":"Auli 3",
+      "city": "Tallinn",
+      "postindex": "11311"
+    },
+    "price": "8.20",
+    "transport": "Omniva, DPD",
+    "seller": {
+      "organization":"Orion Intl",
+      "name":"Javier",
+      "surname":"Donaldo"
+    }
+  },
+  {  
+    "name": "Wooded cables reels",
+    "quantity": "45",
+    "units": null,
+    "condition": "used",
+    "category": "wood",
+    "description": "I have a range of different sized wooden cable reels. They are free to anyone who wishes to collect them.",
+    "imageUrl": "http://www.smileexchange.ie/assets/img/uploads/items/reels.jpg",
+    "location": {
+      "address":"Akadeemia tee 70a",
+      "city": "Tallinn",
+      "postindex": "12615"
+    },
+    "price": "4.00",
+    "transport": "Omniva",
+    "seller": {
+      "organization":"HC Recycle S:A",
+      "name":"Diego",
+      "surname":"Armando"
+    }
+  },
+  {  
+    "name": "Abrasive Belts",
+    "quantity": "10",
+    "units": null,
+    "condition": "used",
+    "category": "textile",
+    "description": "NORTON 4 metre abrasive belts (used). Belts may be re-used for light metal work. They are 16 Grit, made of Alum.Oxide Grain & Fine Tri-Helical Abrasive pattern. Backing on belts is Rayon. Image shown here are the belts in their unused condition.",
+    "imageUrl": "http://www.smileexchange.ie/assets/img/uploads/items/17092013344.jpg",
+    "location": {
+      "address":"Ehitajate tee 58",
+      "city": "Tallinn",
+      "postindex": "12911"
+    },
+    "price": "16.00",
+    "transport": "DPD",
+    "seller": {
+      "organization":"Revel Solutions",
+      "name":"Yalzin",
+      "surname":"Ozgun"
+    }
+  },
+  {  
+    "name": "Nylon Buffing Wheels",
+    "quantity": "2",
+    "units": null,
+    "condition": "used",
+    "category": "plastic",
+    "description": "These wheels are made of Nylon and can be used to buff or polish metal products. Alternatively they could be pulped and used as filling.",
+    "imageUrl": "http://www.smileexchange.ie/assets/img/uploads/items/05092013316_2.jpg",
+    "location": {
+      "address":"Peterburi tee 76",
+      "city": "Tallinn",
+      "postindex": "11415"
+    },
+    "price": "4.20",
+    "transport": "Omniva, DPD",
+    "seller": {
+      "organization":"Krishna International",
+      "name":"Navi",
+      "surname":"Maharashtra"
+    }
+  },
+  {  
+    "name": "Washed PP JAZZ",
+    "quantity": "2",
+    "units": null,
+    "condition": "used",
+    "category": "plastic",
+    "description": "Clean and washed pp jazz regrind ( without black). No contamination. Maybe %2 HDPE.",
+    "imageUrl": "https://d1vpmfwd72pjy6.cloudfront.net/uploads/product/388fded74e39.jpeg",
+    "location": {
+      "address":"Kalevipoja 12",
+      "city": "Tallinn",
+      "postindex": "13625"
+    },
+    "price": "18",
+    "transport": "Omniva, DPD",
+    "seller": {
+      "organization":"Mustcycle",
+      "name":"Anna",
+      "surname":"Paigelan"
+    }
+  }
+]
