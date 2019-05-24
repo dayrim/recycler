@@ -14,7 +14,7 @@ import { configureAnchors } from 'react-update-url-on-scroll'
 import lodashThrottle from 'lodash/throttle';
 import * as layoutActions from '../../actions/layout.js';
 import Link from '@material-ui/core/Link';
-
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
   
 const HashLink = (props) => genericHashLink(props, Link);
@@ -52,6 +52,10 @@ const useStyles = makeStyles(theme => ({
 
 function Topmenu(props) {
   const classes = useStyles();
+  const mobile = useMediaQuery('(max-width:740px)');
+  if(mobile){
+    props.toggleTopmenu(false)
+  }
   let [activeLink, setActiveLink] = useState('');
 
   useEffect(() => {
@@ -60,8 +64,10 @@ function Topmenu(props) {
         lodashThrottle(()=> {
             if (document.documentElement.scrollTop > 25 ) {
             props.toggleTopmenu(false)
-            } else {
-            props.toggleTopmenu(true)
+            } else if (!mobile) {
+              
+                props.toggleTopmenu(true)
+         
             }
           },
           300,
@@ -75,7 +81,7 @@ function Topmenu(props) {
 
       })
     }
-  }, [props, props.topmenuToggled])
+  }, [mobile, props, props.topmenuToggled])
 
   configureAnchors({offset: 65,
     onSectionEnter(newState, oldState){

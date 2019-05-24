@@ -6,6 +6,7 @@ import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import ReactPlayer from 'react-player'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles(theme => ({
   sectionText:{
@@ -27,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 
 
 function Section2() {
-
+  const mobile = useMediaQuery('(max-width:740px)');
   const classes = useStyles();
   return (
     <div className={classes.section}>
@@ -37,7 +38,7 @@ function Section2() {
     <Divider/>
     <Box classes={{root: classes.boxRoot}} className={classes.sectionText}   >
 
-      <ReactPlayer url="/assets/video.mp4" controls width="80%" height="80%"/>
+      <ReactPlayer url="/assets/video.mp4" controls width={mobile ? '100%' : '80%'} height={mobile ? '100%' : '80%'} />
       <Divider/>
     <Divider/>
     <Divider/>

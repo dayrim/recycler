@@ -55,6 +55,9 @@ const useStyles = makeStyles(theme => {
     overlayText:{
       color: 'white'
     },
+    hashComponent:{
+      overflow:'hidden'
+    },
     sectionComponent:{
       minHeight: '65vh',
       flexDirection: 'column',
@@ -75,11 +78,9 @@ const useStyles = makeStyles(theme => {
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 1),
       },
-      marginRight: theme.spacing(3),
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(3),
         width: '450px',
       },
     },
@@ -169,7 +170,7 @@ function Landing(props) {
               <Divider/>
               <Divider/>
               <Divider/>
-              <HashComponent />
+              <HashComponent className={classes.hashComponent}/>
               </Container>
               </ScrollableSection>
               </React.Fragment>)

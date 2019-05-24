@@ -13,11 +13,13 @@ import materialData from '../../../../data/materials.json';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
+import StepConnector from '@material-ui/core/StepConnector';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles(theme => ({
-  root:{
+  stepperRoot:{
       backgroundColor: 'unset',
   },
   section:{
@@ -29,6 +31,20 @@ const useStyles = makeStyles(theme => ({
   media: {
     height: '200px',
   },
+  connectorRoot:{
+    position: 'relative',
+    top: 'unset',
+    left: 'unset',
+    right: 'unset',
+    width: '1px',
+    margin: 'auto'
+  },
+  mobileStepper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column'
+  }
 }));
 
 const stepperContent = [
@@ -78,7 +94,8 @@ const stepperContent = [
 function Section1() {
   let [tabValue, tabChange] = useState(0);
   const classes = useStyles();
-
+  const mobile = useMediaQuery('(max-width:740px)');
+  console.log(mobile)
   return (
     <div className={classes.section} >
       
@@ -97,7 +114,7 @@ function Section1() {
         <Divider/>
         {tabValue === 1 && 
             
-            <Stepper alternativeLabel classes={{ root: classes.root}}>
+            <Stepper alternativeLabel classes={{ root: classes.stepperRoot}} className={mobile ? classes.mobileStepper : null} connector={<StepConnector classes={{root: classes.connectorRoot}}/>} orientation={mobile ? 'vertical':'horizontal'}>
               {stepperContent[1].steps.map((step,key)=>(<Step key={key}>
 
                 <StepLabel active={true}>
@@ -109,7 +126,7 @@ function Section1() {
       </Stepper>
         }
         {tabValue === 0 && 
-            <Stepper alternativeLabel classes={{ root: classes.root}}>
+            <Stepper alternativeLabel classes={{ root: classes.stepperRoot}} className={mobile ? classes.mobileStepper : null} connector={<StepConnector classes={{root: classes.connectorRoot}}/>} orientation={mobile ? 'vertical':'horizontal'}>
             {stepperContent[0].steps.map((step,key)=>(<Step key={key}>
 
               <StepLabel active={true}>
