@@ -132,7 +132,7 @@ function Landing(props) {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search for material …"
+              placeholder="Search for material"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
