@@ -1,9 +1,10 @@
-import { combineReducers } from 'redux';
-import layout from './layout';
-import { connectRouter } from 'connected-react-router'
- 
-export default (history) => combineReducers({
-  router: connectRouter(history),
-  layout
+import { combineReducers } from "redux";
+import { connectRouter } from "connected-react-router";
+import UI from "reducers/UI";
 
-})
+export default history =>
+  combineReducers({
+    router: connectRouter(history),
+
+    UI
+  });

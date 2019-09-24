@@ -1,0 +1,6 @@
+export const INFO_POPUP = {
+    ADD: "INVOICES : INFO_POPUP_ADD",
+    REMOVE: "INVOICES : INFO_POPUP_REMOVE"
+  };
+
+export const TOGGLE_TOPMENU = 'TOGGLE_TOPMENU';

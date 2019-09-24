@@ -1,0 +1,74 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier", "import"],
+  "rules": {
+    "prettier/prettier": ["warn"],
+    "no-shadow": 0,
+    "no-underscore-dangle": 0,
+    "react/jsx-props-no-spreading": 0,
+    "no-use-before-define": 0,
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/newline-after-import": "error",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prop-types": 0,
+    "react/jsx-boolean-value": 0,
+    "react/require-default-props": 0,
+    "react/forbid-prop-types": [
+      {
+        "forbidden": []
+      }
+    ],
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "controlComponents": ["FormControl"],
+        "depth": 3
+      }
+    ],
+    "jsx-a11y/label-has-for": 0
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "sessionStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true
+  },
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
+}
