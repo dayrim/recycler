@@ -11,10 +11,14 @@ import { connect } from "react-redux";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import SearchIcon from "@material-ui/icons/Search";
+import { Grid } from "@material-ui/core";
 import InputBase from "@material-ui/core/InputBase";
 import { fade } from "@material-ui/core/styles/colorManipulator";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getMenuToggled } from "reducers/UI";
+import { FrontpageLayout } from "components";
+import { push } from "connected-react-router";
+import { setTabPage } from "actions/UI";
 
 const useStyles = makeStyles(theme => {
   return {
@@ -92,6 +96,10 @@ const useStyles = makeStyles(theme => {
     inputRoot: {
       color: "inherit"
     },
+    ctaButton: {
+      marginLeft: "30px",
+      marginRight: "30px"
+    },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 7),
       transition: theme.transitions.create("width"),
@@ -105,9 +113,10 @@ const useStyles = makeStyles(theme => {
 
 function Landing(props) {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const topmenuToggled = useSelector(getMenuToggled);
   return (
-    <React.Fragment>
+    <FrontpageLayout>
       <Box className={classes.content}>
         <Container className={classes.content}>
           <Divider />
@@ -132,22 +141,51 @@ function Landing(props) {
             Material exchange for businesses, creators and entrepreneurs
           </Typography>
           <Divider />
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
+          {/* <Grid container alignContent="center" justify="center">
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search for material"
+                classes={{
+                  root: classes.inputRoot,
+                  input: classes.inputInput
+                }}
+              />
             </div>
-            <InputBase
-              placeholder="Search for material"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput
-              }}
-            />
-          </div>
+            <Button variant="contained" color="primary" size="large">
+              Search
+            </Button>
+          </Grid> */}
           <Divider />
-          <Button variant="contained" color="primary" size="large">
-            Search
-          </Button>
+          <Divider />
+          <Grid container alignContent="center" justify="center">
+            <Button
+              className={classes.ctaButton}
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={() => {
+                dispatch(push("/dashboard"));
+                dispatch(setTabPage("./forbuyers"));
+              }}
+            >
+              For buyers
+            </Button>
+            <Button
+              className={classes.ctaButton}
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={() => {
+                dispatch(push("/dashboard"));
+                dispatch(setTabPage("./forsellers"));
+              }}
+            >
+              For sellers
+            </Button>
+          </Grid>
         </Container>
       </Box>
       <section>
@@ -178,7 +216,7 @@ function Landing(props) {
           });
         }
       })}
-    </React.Fragment>
+    </FrontpageLayout>
   );
 }
 

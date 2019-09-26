@@ -2,7 +2,8 @@ import * as U from "constants/UI";
 
 const initState = {
   infoPopups: {},
-  topmenuToggled: true
+  topmenuToggled: true,
+  tabPage: "/forseller"
 };
 
 export default (state = initState, { payload, type }) => {
@@ -21,12 +22,15 @@ export default (state = initState, { payload, type }) => {
       };
     case U.TOGGLE_TOPMENU:
       return { ...state, topmenuToggled: payload };
+    case U.SET_TAB_PAGE:
+      return { ...state, tabPage: payload };
     default:
       return { ...state };
   }
 };
 
 export const getMenuToggled = state => state.UI.topmenuToggled;
+export const getTabPage = state => state.UI.tabPage;
 export const getInfoPopups = state => state.UI.infoPopups;
 export const getLatestPopup = state => {
   const popups = Object.values(state.UI.infoPopups);

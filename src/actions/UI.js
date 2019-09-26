@@ -1,7 +1,6 @@
 import * as U from "constants/UI";
 import uuidv1 from "uuid";
 
-
 export const addPopup = ({
   message = "This is an error message",
   type = "info",
@@ -23,4 +22,11 @@ export const removePopup = ({ id }) => ({
   payload: { id }
 });
 
-export const toggleTopmenu = (payload) => ({ type: U.TOGGLE_TOPMENU, payload: payload })
+export const toggleTopmenu = payload => ({
+  type: U.TOGGLE_TOPMENU,
+  payload: payload
+});
+export const setTabPage = payload => ({
+  type: U.SET_TAB_PAGE,
+  payload
+});
