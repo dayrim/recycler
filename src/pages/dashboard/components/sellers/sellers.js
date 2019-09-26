@@ -11,6 +11,13 @@ import {
 import { Dropzone } from "../";
 import { addMaterial } from "actions/materials";
 import { useDispatch } from "react-redux";
+import {
+  materials,
+  moreSpecific,
+  evenMoreSpecific,
+  units,
+  processing
+} from "data/defaults.js";
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -31,15 +38,15 @@ const Sellers = () => {
   const dispatch = useDispatch();
 
   const [values, setValues] = React.useState({
-    material: "wood",
-    moreSpecific: "plywood",
-    evenMoreSpecific: "birch",
+    material: "Wood",
+    moreSpecific: "Plywood",
+    evenMoreSpecific: "Birch",
     amount: 100,
     location: "Viljandimaa",
     quality: "70%",
-    processing: "finished",
+    processing: "Finished",
     price: 100,
-    units: "kg",
+    units: "KG",
     image: null,
     notes: ""
   });
@@ -49,48 +56,7 @@ const Sellers = () => {
   const handleSave = event => {
     dispatch(addMaterial(values));
   };
-  const materials = [
-    {
-      value: "wood",
-      label: "Wood"
-    },
-    {
-      value: "metal",
-      label: "Metal"
-    },
-    {
-      value: "glass",
-      label: "Glass"
-    },
-    {
-      value: "plastic",
-      label: "Plastic"
-    }
-  ];
-  const moreSpecific = [
-    {
-      value: "plywood",
-      label: "Plywood"
-    }
-  ];
-  const evenMoreSpecific = [
-    {
-      value: "birch",
-      label: "Birch"
-    }
-  ];
-  const units = [
-    {
-      value: "kg",
-      label: "KG"
-    }
-  ];
-  const processing = [
-    {
-      value: "finished",
-      label: "Finished"
-    }
-  ];
+
   return (
     <>
       <Paper className={classes.paper}>
@@ -260,11 +226,11 @@ const Sellers = () => {
       <Divider />
 
       <Grid container justify="flex-end" spacing={2}>
-        {/* <Grid item>
+        <Grid item>
           <Button variant="contained" color="primary" size="large">
             Import CSV
           </Button>
-        </Grid> */}
+        </Grid>
         <Grid item>
           <Button
             variant="contained"

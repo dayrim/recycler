@@ -1,18 +1,5 @@
 [
   {
-    "material": "Wood",
-    "moreSpecific": "Plywood",
-    "evenMoreSpecific": "Birch",
-    "amount": 100,
-    "location": "Viljandimaa",
-    "quality": "70%",
-    "processing": "Finished",
-    "price": 100,
-    "units": "KG",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP55e1U6aAVQ3OUqowzjceWGeh5qwDOGSFldnPZ5S_ZplzXdsK",
-    "notes": ""
-  },
-  {
     "material": "Textile",
     "type": "Cotton",
     "texture": "Smooth",

@@ -10,6 +10,11 @@ const routes = [
     path: "/dashboard",
     name: "Dashboard",
     componentpath: "dashboard/dashboard.js"
+  },
+  {
+    path: "/product-page",
+    name: "Product Page",
+    componentpath: "productpage/productpage.js"
   }
 ];
 export default routes;

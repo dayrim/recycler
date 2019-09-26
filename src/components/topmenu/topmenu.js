@@ -92,7 +92,7 @@ function Topmenu() {
             alt="recyclist logo"
           />
           <Typography variant="h6" align="center" color="inherit">
-            Recyclist
+            Platform for excess materials
           </Typography>
           <Toolbar>
             {routes.map((route, key) => {

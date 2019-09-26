@@ -130,9 +130,9 @@ function Landing(props) {
             className={classes.overlayText}
             align="center"
           >
-            Recyclist, conscious businesses
+            Marketplace to Ignite Circular Revolution
           </Typography>
-          <Divider />
+          {/* <Divider />
           <Typography
             variant="subtitle1"
             className={classes.overlayText}
@@ -140,7 +140,7 @@ function Landing(props) {
           >
             Material exchange for businesses, creators and entrepreneurs
           </Typography>
-          <Divider />
+          <Divider /> */}
           {/* <Grid container alignContent="center" justify="center">
             <div className={classes.search}>
               <div className={classes.searchIcon}>
