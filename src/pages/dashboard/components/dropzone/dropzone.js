@@ -66,7 +66,7 @@ const Dropzone = ({ image = null, setImage, className = {} }) => {
   return (
     <Toolbar
       {...getRootProps()}
-      className={clsx(classes.root, {
+      className={clsx(classes.root,className, {
         [classes.highlight]: true
       })}
     >

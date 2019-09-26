@@ -8,3 +8,4 @@ export { default as Topmenu } from "./topmenu/topmenu.js";
 export { default as Footer } from "./footer/footer.js";
 export { default as TabBar } from "./tabbar/tabbar.js";
 export { default as WarningArea } from "./warningArea/warningArea.js";
+export { default as UserMenu } from "./usermenu/usermenu.js";

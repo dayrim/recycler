@@ -7,11 +7,17 @@ import AppBar from "@material-ui/core/AppBar";
 import { push } from "connected-react-router";
 import { setTabPage } from "actions/UI";
 import { getTabPage } from "reducers/UI";
+import { UserMenu } from "components";
 
 const useStyles = makeStyles(theme => ({
   tabRoot: {
     textTransform: "capitalize",
     fontSize: "15px"
+  },
+  userMenu: {
+    position: "absolute",
+    top: "0",
+    right: "0"
   }
 }));
 // function TabPanel(props) {
@@ -69,6 +75,7 @@ const TabBar = () => {
             }}
           />
         </Tabs>
+        {/* <UserMenu></UserMenu> */}
       </AppBar>
     </>
   );
