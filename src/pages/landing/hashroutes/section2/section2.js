@@ -64,23 +64,19 @@ function Section1() {
 
   return (
     <div className={classes.section}>
-      <Typography variant="h2" color="inherit" align="center">
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <img
+          src={process.env.PUBLIC_URL + "/assets/valuePro.png"}
+          style={{ width: "70%" }}
+        ></img>
+      </div>
+      {/* <Typography variant="h2" color="inherit" align="center">
         Our process
       </Typography>
 
       <Divider />
 
-      {/* <Typography
-        className={classes.sectionText}
-        variant="body1"
-        color="inherit"
-        align="center"
-      >
-        To make successful matches we use systematic and holistic approuch based
-        on business needs. The following tools are instrumental to this process
-      </Typography>
-
-      <Divider /> */}
+    
 
       <Stepper
         orientation="vertical"
@@ -104,7 +100,7 @@ function Section1() {
             </StepLabel>
           </Step>
         ))}
-      </Stepper>
+      </Stepper> */}
     </div>
   );
 }
