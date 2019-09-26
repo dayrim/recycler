@@ -99,113 +99,15 @@ function Section1() {
   return (
     <div className={classes.section}>
       <Typography variant="h2" color="inherit" align="center">
-        How to use our platform
+        Business model
       </Typography>
-      <Divider />
-      <Tabs
-        indicatorColor="primary"
-        textColor="primary"
-        centered
-        value={tabValue}
-        onChange={(event, tabValue) => tabChange(tabValue)}
-      >
-        {stepperContent.map((tab, key) => (
-          <Tab label={tab.tabLabel} key={key}></Tab>
-        ))}
-      </Tabs>
-      <Divider />
-      {tabValue === 1 && (
-        <Stepper
-          alternativeLabel
-          classes={{ root: classes.stepperRoot }}
-          className={mobile ? classes.mobileStepper : null}
-          connector={
-            <StepConnector classes={{ root: classes.connectorRoot }} />
-          }
-          orientation={mobile ? "vertical" : "horizontal"}
-        >
-          {stepperContent[1].steps.map((step, key) => (
-            <Step key={key}>
-              <StepLabel active={true}>
-                <Typography variant="h6" color="inherit" align="center">
-                  {step.header}
-                </Typography>
-                <Typography variant="body1" color="inherit" align="center">
-                  {step.content}
-                </Typography>
-              </StepLabel>
-            </Step>
-          ))}
-        </Stepper>
-      )}
-      {tabValue === 0 && (
-        <Stepper
-          alternativeLabel
-          classes={{ root: classes.stepperRoot }}
-          className={mobile ? classes.mobileStepper : null}
-          connector={
-            <StepConnector classes={{ root: classes.connectorRoot }} />
-          }
-          orientation={mobile ? "vertical" : "horizontal"}
-        >
-          {stepperContent[0].steps.map((step, key) => (
-            <Step key={key}>
-              <StepLabel active={true}>
-                <Typography variant="h6" color="inherit" align="center">
-                  {step.header}
-                </Typography>
-                <Typography variant="body1" color="inherit" align="center">
-                  {step.content}
-                </Typography>
-              </StepLabel>
-            </Step>
-          ))}
-        </Stepper>
-      )}
-      <Divider />
-      <Divider />
 
-      {/*
-      <Typography variant="h2" color="inherit" align="center">
-        Recent materials
-      </Typography>
- <Divider />
-      <Divider />
-      <Divider />
-      <Divider />
-      <Divider />
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Grid container justify="center" spacing={3}>
-            {materialData.map((material, index) => (
-              <Grid key={index} item>
-                <Card className={classes.card}>
-                  <CardActionArea>
-                    <CardMedia
-                      className={classes.media}
-                      image={material.imageUrl}
-                      title={material.name}
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {material.name}
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="textSecondary"
-                        component="p"
-                      >
-                        {material.description}
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-      </Grid> */}
-
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <img
+          src={process.env.PUBLIC_URL + "/assets/model.png"}
+          style={{ width: "70%" }}
+        ></img>
+      </div>
       <Divider />
       <Divider />
       <Divider />
