@@ -105,7 +105,7 @@ function Section1() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img
           src={process.env.PUBLIC_URL + "/assets/model.png"}
-          style={{ width: "70%" }}
+          style={{ width: "70%", height: "70%" }}
         ></img>
       </div>
       <Divider />

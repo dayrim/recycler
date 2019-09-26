@@ -67,7 +67,7 @@ function Section1() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img
           src={process.env.PUBLIC_URL + "/assets/valuePro.png"}
-          style={{ width: "70%" }}
+          style={{ width: "70%", height: "70%" }}
         ></img>
       </div>
       {/* <Typography variant="h2" color="inherit" align="center">
