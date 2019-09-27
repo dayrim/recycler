@@ -80,121 +80,171 @@ const MaterialPage = () => {
                   flexDirection: "column"
                 }}
               >
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Material:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     Textile
                   </Typography>
                   <br></br>
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Type:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     Leather
                   </Typography>
                   <br></br>
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Texture:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     Smooth
                   </Typography>
                   <br></br>{" "}
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Quality:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     Good
                   </Typography>
                   <br></br>{" "}
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Color:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     Blue
                   </Typography>
                   <br></br>{" "}
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Size:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     3.5
                   </Typography>
                   <br></br>{" "}
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Units:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     Yards
                   </Typography>
                   <br></br>{" "}
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Quantity:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     30
                   </Typography>
                   <br></br>{" "}
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Location:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     Tartu
                   </Typography>
                   <br></br>{" "}
                 </div>
-                <div>
-                  <Typography style={{ display: "inline-block" }} variant="h5">
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <Typography
+                    style={{ flex: "1 1 70%", display: "inline-block" }}
+                    variant="h5"
+                  >
                     Price:&nbsp;&nbsp;&nbsp;&nbsp;
                   </Typography>
                   <Typography
-                    style={{ display: "inline-block" }}
-                    variant="body2"
+                    style={{ flex: "1 1 30%", display: "inline-block" }}
+                    variant="h6"
                   >
                     10
                   </Typography>

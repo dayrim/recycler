@@ -66,6 +66,34 @@ const Sellers = () => {
     setValues({ ...values, [name]: event.target.value });
   };
   const handleSave = event => {
+    console.log(values.material, "values.material ");
+    const material =
+      values.material === "Wood"
+        ? {
+            material: values.material,
+            moreSpecific: values.moreSpecific,
+            evenMoreSpecific: values.evenMoreSpecific,
+            amount: values.amount,
+            location: values.location,
+            quality: values.quality,
+            processing: values.processing,
+            price: values.price,
+            units: values.units,
+            image: values.image
+          }
+        : {
+            material: values.material,
+            type: values.type,
+            texture: values.texture,
+            condition: values.condition,
+            color: values.color,
+            size: values.size,
+            unit: values.unit,
+            quantity: values.quantity,
+            price: values.price,
+            location: values.location,
+            image: values.image
+          };
     dispatch(addMaterial(values));
   };
 

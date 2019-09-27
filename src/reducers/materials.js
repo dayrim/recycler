@@ -5,7 +5,7 @@ const initState = materialData;
 export default (state = initState, { payload, type }) => {
   switch (type) {
     case M.ADD_MATERIAL:
-      return [...state, payload];
+      return [payload, ...state];
 
     default:
       return [...state];
