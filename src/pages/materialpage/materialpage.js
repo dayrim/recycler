@@ -214,7 +214,7 @@ const MaterialPage = () => {
                   value={`
                   Hi !
 
-                  I would like to buy your material to use it to make chairs.
+                  I would like to buy your material to use it to make bags.
                   Please send me the transaction details and timeframe for picking it up.
                   
                   Thank you '

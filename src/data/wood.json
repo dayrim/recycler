@@ -1,5 +1,17 @@
 [
   {
+    "material": "Wood",
+    "moreSpecific": "Plywood",
+    "evenMoreSpecific": "Birch",
+    "amount": 100,
+    "location": "Tallinn",
+    "quality": "70%",
+    "processing": "Finished",
+    "price": 100,
+    "units": "KG",
+    "image": "https://i.ibb.co/vwzS34Z/Untitled-2.jpg"
+  },
+  {
     "material": "Textile",
     "type": "Cotton",
     "texture": "Smooth",
@@ -25,19 +37,7 @@
     "location": "Parnu",
     "image": "https://res.cloudinary.com/derbiet/image/upload/v1569518097/leather-reusable_tg2oll.jpg"
   },
-  {
-    "material": "Textile",
-    "type": "Leather",
-    "texture": "Smooth",
-    "condition": "Good",
-    "color": "Black",
-    "size": 1,
-    "unit": "Yards",
-    "quantity": 5,
-    "price": 5.99,
-    "location": "Tartu",
-    "image": "https://res.cloudinary.com/derbiet/image/upload/v1569518092/black-leather-reusable_kxcpiy.jpg"
-  },
+
   {
     "material": "Textile",
     "type": "Denim",

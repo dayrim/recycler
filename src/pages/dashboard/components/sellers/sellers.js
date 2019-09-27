@@ -43,7 +43,7 @@ const Sellers = () => {
   const dispatch = useDispatch();
 
   const [values, setValues] = React.useState({
-    material: "Textile",
+    material: "Wood",
     moreSpecific: "Plywood",
     evenMoreSpecific: "Birch",
     amount: 100,
