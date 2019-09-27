@@ -107,12 +107,28 @@ function Section1() {
       <Divider />
       <Divider />
       <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img
           src={process.env.PUBLIC_URL + "/assets/model.png"}
           style={{ width: "86%", height: "70%" }}
         ></img>
       </div>
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
       <Divider />
       <Divider />
       <Divider />

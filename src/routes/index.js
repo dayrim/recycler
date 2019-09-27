@@ -3,8 +3,8 @@ const routes = [
     path: "/",
     name: "Landing",
     componentpath: "landing/landing.js",
-    hashroutenames: ["Value proposition", "Business model"],
-    hashroutes: ["section2", "section3"]
+    hashroutenames: ["Business model", "Value proposition"],
+    hashroutes: ["section3", "section2"]
   },
   {
     path: "/dashboard",

@@ -70,6 +70,14 @@ function Section1() {
           style={{ width: "70%", height: "70%" }}
         ></img>
       </div>
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
+      <Divider />
       {/* <Typography variant="h2" color="inherit" align="center">
         Our process
       </Typography>
