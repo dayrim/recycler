@@ -246,7 +246,7 @@ const MaterialPage = () => {
                     style={{ flex: "1 1 30%", display: "inline-block" }}
                     variant="h6"
                   >
-                    10
+                    10 EUR
                   </Typography>
                   <br></br>{" "}
                 </div>

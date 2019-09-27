@@ -98,7 +98,10 @@ const useStyles = makeStyles(theme => {
     },
     ctaButton: {
       marginLeft: "30px",
-      marginRight: "30px"
+      marginRight: "30px",
+      width: "200px",
+      height: "60px",
+      fontSize: "18px"
     },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 7),
@@ -126,7 +129,7 @@ function Landing(props) {
           <Divider />
           <Divider />
           <Typography
-            variant="h3"
+            variant="h2"
             className={classes.overlayText}
             align="center"
           >
