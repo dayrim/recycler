@@ -32,10 +32,13 @@ import {
   processing,
   type,
   texture,
-  quality,
+  condition,
   color
 } from "data/defaults.js";
 import { WoodCard, TextileCard } from "../";
+import { Link as RouterLink } from "react-router-dom";
+import Link from "@material-ui/core/Link";
+
 const iOSBoxShadow =
   "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
 const IOSSlider = withStyles({
@@ -134,16 +137,16 @@ const Sellers = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const materialData = useSelector(getMaterials);
-  const [values, setValues] = React.useState({
-    material: "Textile"
-  });
+  const [values, setValues] = React.useState({});
   const handleChange = name => event => {
     setValues({ ...values, [name]: event.target.value });
   };
   const handleSave = event => {
     dispatch(addMaterial(values));
   };
-
+  const handleCardClick = () => {
+    console.log("click");
+  };
   return (
     <>
       <Drawer
@@ -234,10 +237,10 @@ const Sellers = () => {
           <ListItem>
             <TextField
               select
-              label="Quality"
+              label="Condition"
               className={classes.textField}
-              value={values.quality}
-              onChange={handleChange("quality")}
+              value={values.condition}
+              onChange={handleChange("condition")}
               SelectProps={{
                 MenuProps: {
                   className: classes.menu
@@ -245,7 +248,7 @@ const Sellers = () => {
               }}
               margin="normal"
             >
-              {quality.map(option => (
+              {condition.map(option => (
                 <MenuItem key={option.value} value={option.value}>
                   {option.label}
                 </MenuItem>
@@ -341,9 +344,21 @@ const Sellers = () => {
                 {materialData.map((material, index) => (
                   <Grid key={index} item>
                     {material.material === "Wood" ? (
-                      <WoodCard material={material}></WoodCard>
+                      <Link
+                        underline="none"
+                        component={RouterLink}
+                        to="/material-page"
+                      >
+                        <WoodCard material={material}></WoodCard>
+                      </Link>
                     ) : (
-                      <TextileCard material={material} />
+                      <Link
+                        underline="none"
+                        component={RouterLink}
+                        to="/material-page"
+                      >
+                        <TextileCard material={material} />
+                      </Link>
                     )}
                   </Grid>
                 ))}

@@ -24,6 +24,10 @@ export const type = [
   {
     value: "Cotton",
     label: "Cotton"
+  },
+  {
+    value: "Leather",
+    label: "Leather"
   }
 ];
 export const texture = [
@@ -32,7 +36,7 @@ export const texture = [
     label: "Smooth"
   }
 ];
-export const quality = [
+export const condition = [
   {
     value: "Good",
     label: "Good"
@@ -42,6 +46,10 @@ export const color = [
   {
     value: "Grey",
     label: "Grey"
+  },
+  {
+    value: "Brown",
+    label: "Brown"
   }
 ];
 export const moreSpecific = [
@@ -60,6 +68,12 @@ export const units = [
   {
     value: "KG",
     label: "KG"
+  }
+];
+export const unit = [
+  {
+    value: "Yards",
+    label: "Yards"
   }
 ];
 export const processing = [

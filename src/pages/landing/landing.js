@@ -168,10 +168,10 @@ function Landing(props) {
               size="large"
               onClick={() => {
                 dispatch(push("/dashboard"));
-                dispatch(setTabPage("./forbuyers"));
+                dispatch(setTabPage("./forsellers"));
               }}
             >
-              For buyers
+              For sellers
             </Button>
             <Button
               className={classes.ctaButton}
@@ -180,10 +180,10 @@ function Landing(props) {
               size="large"
               onClick={() => {
                 dispatch(push("/dashboard"));
-                dispatch(setTabPage("./forsellers"));
+                dispatch(setTabPage("./forbuyers"));
               }}
             >
-              For sellers
+              For buyers
             </Button>
           </Grid>
         </Container>

@@ -12,9 +12,9 @@ const routes = [
     componentpath: "dashboard/dashboard.js"
   },
   {
-    path: "/product-page",
-    name: "Product Page",
-    componentpath: "productpage/productpage.js"
+    path: "/material-page",
+    name: "Material Page",
+    componentpath: "materialpage/materialpage.js"
   }
 ];
 export default routes;

@@ -75,42 +75,42 @@ const WoodCard = ({ material }) => {
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
             {material.moreSpecific}, {material.evenMoreSpecific}
-          </Typography>{" "}
+          </Typography>
           <br></br>
           <Typography style={{ display: "inline-block" }} variant="body2">
             Material:&nbsp;&nbsp;
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
             {material.amount} {material.units}
-          </Typography>{" "}
+          </Typography>
           <br></br>
           <Typography style={{ display: "inline-block" }} variant="subtitle1">
             Location:&nbsp;&nbsp;
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
             {material.location}
-          </Typography>{" "}
+          </Typography>
           <br></br>
           <Typography style={{ display: "inline-block" }} variant="subtitle1">
-            Quality:&nbsp;&nbsp;
+            Condition:&nbsp;&nbsp;
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
-            {material.quality}
-          </Typography>{" "}
+            {material.condition}
+          </Typography>
           <br></br>
           <Typography style={{ display: "inline-block" }} variant="subtitle1">
             Processing:&nbsp;&nbsp;
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
             {material.processing}
-          </Typography>{" "}
+          </Typography>
           <br></br>
           <Typography style={{ display: "inline-block" }} variant="subtitle1">
             Price:&nbsp;&nbsp;
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
             {material.price}
-          </Typography>{" "}
+          </Typography>
           <br></br>
         </CardContent>
       </CardActionArea>

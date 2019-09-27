@@ -83,25 +83,26 @@ const TextileCard = ({ material }) => {
             {material.texture}
           </Typography>
           <br></br>
-          <Typography style={{ display: "inline-block" }} variant="body2">
-            Amount:&nbsp;&nbsp;
+          <Typography style={{ display: "inline-block" }} variant="subtitle1">
+            Color:&nbsp;&nbsp;
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
-            {material.size}
-          </Typography>
-          <br></br>
-          <Typography style={{ display: "inline-block" }} variant="body2">
-            Units:&nbsp;&nbsp;
-          </Typography>
-          <Typography style={{ display: "inline-block" }} variant="body2">
-            {material.unit}
+            {material.color}
           </Typography>
           <br></br>
+
           <Typography style={{ display: "inline-block" }} variant="subtitle1">
             Quantity:&nbsp;&nbsp;
           </Typography>
           <Typography style={{ display: "inline-block" }} variant="body2">
             {material.quantity}
+          </Typography>
+          <br></br>
+          <Typography style={{ display: "inline-block" }} variant="subtitle1">
+            Units:&nbsp;&nbsp;
+          </Typography>
+          <Typography style={{ display: "inline-block" }} variant="body2">
+            {material.unit}
           </Typography>
           <br></br>
           <Typography style={{ display: "inline-block" }} variant="subtitle1">

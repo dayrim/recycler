@@ -101,7 +101,8 @@ function Section1() {
       <Typography variant="h2" color="inherit" align="center">
         Business model
       </Typography>
-
+      <Divider />
+      <Divider />
       <div style={{ display: "flex", justifyContent: "center" }}>
         <img
           src={process.env.PUBLIC_URL + "/assets/model.png"}
